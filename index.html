@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a Cloud Engineer & AWS Solutions Associate specializing in scalable architecture and DevOps.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter for UI, Fira Code for technical details -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">./shivam-rohilla</a>
+            <!-- Simple hamburger for mobile can be added here -->
+            <ul class="nav-links">
+                <li><a href="#summary">Bio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact" class="btn-primary">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. Professional Summary + Core Strengths -->
+    <section id="summary" class="hero-section section-dark">
+        <div class="container hover-tilt">
+            <div class="terminal-badge">
+                <span class="status-dot"></span> System Operational
+            </div>
+            <h1 class="glitch-text" data-text="Shivam Rohilla">
+                Shivam Rohilla<br>
+                <span class="highlight">AWS Cloud Associate | IT & Systems</span>
+            </h1>
+            <p class="section-sub">
+                AI · Campus Mantri @ GeeksforGeeks · Digital Marketing.<br><br>
+                I work with cloud infrastructure, systems, and technology-driven platforms, focusing on reliability,
+                structure, and real-world execution.
+            </p>
+            <div class="cta-group" style="margin-bottom: 3rem;">
+                <a href="https://www.linkedin.com/in/shivam-rohilla-/" target="_blank" class="btn-linkedin hover-lift">
+                    <span class="btn-icon">🔗</span> LinkedIn
+                </a>
+                <a href="https://github.com/shivam-rohilla" target="_blank" class="btn-github hover-lift">
+                    <span class="btn-icon">💻</span> GitHub
+                </a>
+                <a href="resume.pdf" class="btn-resume hover-lift" download>
+                    <span class="btn-icon">📄</span> Resume
+                </a>
+            </div>
+
+            <div class="core-strengths">
+                <div class="strength-item">
+                    <span class="icon">☁️</span>
+                    <h3>Cloud Infrastructure Mindset</h3>
+                </div>
+                <div class="strength-item">
+                    <span class="icon">🛡️</span>
+                    <h3>Systems Reliability & Support</h3>
+                </div>
+                <div class="strength-item">
+                    <span class="icon">🧩</span>
+                    <h3>Structured Problem Solving</h3>
+                </div>
+                <div class="strength-item">
+                    <span class="icon">📈</span>
+                    <h3>Discipline & Long-term Focus</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Technical Skills -->
+    <section id="skills" class="section-panel section-medium">
+        <div class="container">
+            <h2 class="section-header">Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-card hover-lift">
+                    <h3>Cloud & Systems</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">AWS (EC2, S3, RDS, IAM)</span>
+                        <span class="tag">Auto Scaling & ALB</span>
+                        <span class="tag">Systems Manager (SSM)</span>
+                        <span class="tag">Linux Fundamentals</span>
+                        <span class="tag">VPC & Security Groups</span>
+                    </div>
+                </div>
+                <div class="skill-card hover-lift">
+                    <h3>Web & Programming</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Python (Scripting/Logic)</span>
+                        <span class="tag">HTML5 & CSS3</span>
+                        <span class="tag">SQL (MySQL)</span>
+                    </div>
+                </div>
+                <div class="skill-card hover-lift">
+                    <h3>CS Fundamentals</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Operating Systems</span>
+                        <span class="tag">DBMS</span>
+                        <span class="tag">Software Engineering Principles</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Featured Projects -->
+    <section id="projects" class="section-panel section-dark">
+        <div class="container">
+            <h2 class="section-header">Featured Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <article class="project-card hover-lift">
+                    <div class="card-header">
+                        <span class="folder-icon">📂</span>
+                        <h3>Multi-Tier AWS Architecture</h3>
+                        <a href="https://github.com/shivam-rohilla/Highly-available-multi-tier-AWS-architecture"
+                            class="source-link" target="_blank">View Code ↗</a>
+                    </div>
+                    <p class="project-desc">
+                        Designed a highly available architecture with EC2 behind ALB and Auto Scaling. Integrated RDS
+                        and strict security groups for fault tolerance.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tag">AWS EC2</span>
+                        <span class="tag">Auto Scaling</span>
+                        <span class="tag">RDS</span>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card hover-lift">
+                    <div class="card-header">
+                        <span class="folder-icon">🔒</span>
+                        <h3>Secure App Deployment (No SSH)</h3>
+                        <a href="https://github.com/shivam-rohilla" class="source-link" target="_blank">View Code ↗</a>
+                    </div>
+                    <p class="project-desc">
+                        Implemented a secure workflow using AWS Systems Manager (SSM), eliminating direct SSH access to
+                        reduce attack surface.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tag">AWS SSM</span>
+                        <span class="tag">IAM Roles</span>
+                        <span class="tag">Security</span>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card hover-lift">
+                    <div class="card-header">
+                        <span class="folder-icon">�</span>
+                        <h3>Clawdbot – AI System Automation</h3>
+                        <a href="https://github.com/shivam-rohilla/clawdbot-aws-deployment" class="source-link"
+                            target="_blank">View Code ↗</a>
+                    </div>
+                    <p class="project-desc">
+                        Designed a local AI-assisted bot to execute controlled system workflows, focusing on safe
+                        command execution and reliability.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tag">Local Automation</span>
+                        <span class="tag">System Workflows</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card hover-lift">
+                    <div class="card-header">
+                        <span class="folder-icon">🤖</span>
+                        <h3>Student Assistance Chatbot</h3>
+                        <a href="https://github.com/shivam-rohilla" class="source-link" target="_blank">View Code ↗</a>
+                    </div>
+                    <p class="project-desc">
+                        Created a rule-based chatbot to support students with academic queries, focusing on structured
+                        automation logic.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tag">Python</span>
+                        <span class="tag">Logic Design</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Education -->
+    <section id="education" class="section-panel section-medium">
+        <div class="container">
+            <h2 class="section-header">Education & Learning</h2>
+            <div class="timeline">
+                <!-- MCA -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Present</div>
+                    <div class="timeline-content">
+                        <h3>Master of Computer Applications (MCA)</h3>
+                        <span class="timeline-org">Deenbandhu Chotu Ram University of Science and Technology
+                            (DCRUST)</span>
+                        <p>Focus on Cloud Computing, Advanced Algorithms, and System Architecture.</p>
+                    </div>
+                </div>
+
+                <!-- BCA -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 – 2023</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Computer Applications (BCA)</h3>
+                        <span class="timeline-org">DCRUST, Sonipat</span>
+                        <p>Core foundations in Programming, Networking, and Database Management.</p>
+                    </div>
+                </div>
+
+                <!-- Schooling -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Completed 2020</div>
+                    <div class="timeline-content">
+                        <h3>Senior Secondary & Secondary Education</h3>
+                        <span class="timeline-org">Kendriya Vidyalaya No.1, Hindon</span>
+                        <p>Science Stream (Non-Medical) with Computer Science.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Certifications -->
+    <section id="certifications" class="section-panel section-dark">
+        <div class="container">
+            <h2 class="section-header">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card hover-lift">
+                    <div class="cert-icon">☁️</div>
+                    <div class="cert-info">
+                        <h3>AWS Certified Solutions Architect</h3>
+                        <span class="cert-level">Associate</span>
+                        <p class="cert-id">Verified Credential</p>
+                    </div>
+                </div>
+                <div class="cert-card hover-lift">
+                    <div class="cert-icon">🛠️</div>
+                    <div class="cert-info">
+                        <h3>Google Technical Support Fundamentals</h3>
+                        <span class="cert-level">Coursera</span>
+                    </div>
+                </div>
+                <div class="cert-card hover-lift">
+                    <div class="cert-icon">🤖</div>
+                    <div class="cert-info">
+                        <h3>AI & Machine Learning Internship</h3>
+                        <span class="cert-level">IBM SkillBuild / Edunet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. About Me -->
+    <section id="about" class="section-panel section-medium">
+        <div class="container">
+            <h2 class="section-header">About Me</h2>
+            <div class="about-content" style="max-width: 800px; color: var(--text-secondary);">
+                <p style="margin-bottom: 1.5rem;">
+                    I am interested in how technology systems are designed, deployed, and sustained over time. I value
+                    structure, discipline, and reliability in both engineering and personal growth. Rather than chasing
+                    trends, I focus on building strong fundamentals and applying them through practical projects and
+                    real-world scenarios.
+                </p>
+                <p>
+                    Alongside my technical work, I serve as a <strong>Campus Mantri for GeeksforGeeks</strong>, where I
+                    contribute to peer learning initiatives and technical community engagement. I also have experience
+                    in digital marketing, which has strengthened my understanding of audience engagement, consistency,
+                    and execution across platforms.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Let's Connect -->
+    <section id="contact" class="section-panel section-accent">
+        <div class="container contact-wrapper">
+            <h2>Ready to Connect?</h2>
+            <p>I’m open to opportunities in Cloud Engineering, IT Support, Systems, and Infrastructure-focused
+                internships where learning and ownership are valued.</p>
+
+            <div class="contact-methods">
+                <a href="mailto:shvmroh@gmail.com" class="contact-btn primary hover-lift">
+                    <span class="icon">📩</span> shvmroh@gmail.com
+                </a>
+                <div class="social-row">
+                    <a href="https://www.linkedin.com/in/shivam-rohilla-/" target="_blank"
+                        class="contact-btn secondary hover-lift">LinkedIn</a>
+                    <a href="https://github.com/shivam-rohilla" target="_blank"
+                        class="contact-btn secondary hover-lift">GitHub</a>
+                </div>
+            </div>
+
+            <footer class="final-footer">
+                <p>© 2026 Shivam Rohilla. Built with semantic HTML & pure CSS.</p>
+            </footer>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

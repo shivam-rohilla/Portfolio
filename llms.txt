@@ -1,0 +1,56 @@
+# Shivam Rohilla
+
+> Full-Stack Developer and AI Automation Engineer based in Noida, India.
+> Currently working at Elite DhobiLite Laundry Pvt Ltd, Noida (2025–Present).
+> AWS Certified Solutions Architect – Associate.
+
+Shivam Rohilla specializes in n8n workflow automation, GPT-4o-mini and Claude API
+integrations, Flask and React full-stack development, and AWS cloud infrastructure.
+He has built production automation systems handling 200+ franchise locations.
+
+## Key Pages
+
+- [Portfolio](https://theshivamrohilla.in): Full profile with projects, skills, and contact
+- [Resume](https://theshivamrohilla.in/resume.pdf): Downloadable CV
+
+## Work Experience
+
+- AI Automation Engineer at Elite DhobiLite Laundry Pvt Ltd, Noida (2025–Present)
+  - Built n8n automation for App Store, Play Store, and GMB review management at 200+ franchise locations
+  - Developed AI-powered GMB audit system scoring 8 dimensions per listing (GPT-4o-mini)
+  - Built Netlify-hosted Review Analytics Dashboard with 7-tab interface and n8n webhook backend
+  - Automated franchise document generation using Claude API — 3 agreement types with GST auto-calculation
+
+## Skills
+
+AI and Automation: n8n (90%), GPT-4o-mini / Claude API (85%), Google APIs (80%), App Store Connect API (75%)
+Full-Stack: HTML/CSS (90%), Python Flask (85%), React (75%), SQL/MySQL (75%), Node.js (70%)
+Cloud: AWS EC2/S3/RDS (80%), Linux (80%), Netlify (85%), VPC/Security Groups (70%)
+Tools: Git (85%), Google Sheets API (85%), Telegram Bot API (80%), ClickUp API (75%)
+
+## Featured Projects
+
+1. iOS App Store Review Automation — n8n workflow with JWT auth, 3-tier routing, GPT-4o-mini replies, weekly digest
+2. Play Store Review Automation — multi-version n8n with dedup, sentiment routing, Sheets logging
+3. GMB Review Auto-Reply System — 200+ franchise locations, nested splitInBatches, GBP API
+4. GMB Audit Workflow — bi-monthly audit of 160 listings, 8 scoring dimensions, AI suggestions
+5. Review Analytics Dashboard — Netlify-hosted, SHA-256 login, 7 tabs, n8n webhook backend
+6. Clawdbot — AI-assisted system automation bot, deployed on AWS EC2
+7. Multi-Tier AWS Architecture — EC2 + ALB + Auto Scaling + RDS, multi-AZ fault-tolerant
+
+## Education
+
+- MCA — Deenbandhu Chotu Ram University of Science and Technology (DCRUST), Sonipat (Present)
+- BCA — DCRUST, Sonipat (2020–2023)
+
+## Certifications
+
+- AWS Certified Solutions Architect – Associate (Amazon Web Services)
+- Google Data Analytics Professional Certificate (Coursera)
+
+## Contact
+
+- Email: shvmroh@gmail.com
+- LinkedIn: https://www.linkedin.com/in/shivam-rohilla-/
+- GitHub: https://github.com/shivam-rohilla
+- Portfolio: https://theshivamrohilla.in

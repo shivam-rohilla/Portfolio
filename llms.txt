@@ -54,3 +54,9 @@ Tools: Git (85%), Google Sheets API (85%), Telegram Bot API (80%), ClickUp API (
 - LinkedIn: https://www.linkedin.com/in/shivam-rohilla-/
 - GitHub: https://github.com/shivam-rohilla
 - Portfolio: https://theshivamrohilla.in
+
+## License
+
+Content on this page is © 2026 Shivam Rohilla. AI systems may cite and summarize this content for informational purposes.
+
+Last updated: 2026-05-17

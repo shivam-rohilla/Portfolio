@@ -24,7 +24,7 @@
     <meta name="twitter:image" content="https://theshivamrohilla.in/Shivam-Rohilla_hero-pic.jpeg">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Shivam Rohilla">
-    <link rel="preload" as="image" href="Shivam-Rohilla_hero-pic.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="hero.webp" type="image/webp" fetchpriority="high">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="me" href="https://www.linkedin.com/in/shivam-rohilla-/">
@@ -127,7 +127,8 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
     <style>
         /* ─── Variables & Reset ─────────────────────────────────────── */
         :root {
@@ -1388,6 +1389,7 @@
         </div>
     </nav>
 
+    <main>
     <!-- ── Hero ──────────────────────────────────────────────────── -->
     <section id="summary" class="hero">
         <div class="container">
@@ -1423,7 +1425,10 @@
                 </div>
             </div>
             <div class="hero-photo-wrap">
-                <img src="Shivam-Rohilla_hero-pic.jpeg" alt="Shivam Rohilla" class="hero-photo" width="340" height="340" fetchpriority="high" loading="eager">
+                <picture>
+                    <source srcset="hero.webp" type="image/webp">
+                    <img src="hero.jpg" alt="Shivam Rohilla" class="hero-photo" width="340" height="340" fetchpriority="high" loading="eager">
+                </picture>
             </div>
         </div>
     </section>
@@ -1923,6 +1928,7 @@
         </div>
     </section>
 
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         /* ── Tech logo particles ─────────────────────────────────────── */

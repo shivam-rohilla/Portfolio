@@ -130,7 +130,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
     <style>
-        /* ─── Variables & Reset ─────────────────────────────────────── */
+        
         :root {
             --bg-dark:   #0d1117;
             --bg-mid:    #161b22;
@@ -161,7 +161,7 @@
 
         a { text-decoration: none; color: inherit; }
 
-        /* ─── Layout ────────────────────────────────────────────────── */
+        
         .container {
             max-width: 1080px;
             margin: 0 auto;
@@ -198,7 +198,7 @@
 
         .section-title.purple { border-color: var(--purple); }
 
-        /* ─── Custom cursor ─────────────────────────────────────────── */
+        
         @media (pointer: fine) {
             * { cursor: none !important; }
 
@@ -230,7 +230,7 @@
             }
         }
 
-        /* ─── Email copy + toast ────────────────────────────────────── */
+        
         .email-row {
             display: flex;
             align-items: center;
@@ -288,7 +288,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* ─── Open to Work pill ─────────────────────────────────────── */
+        
         #open-to-work {
             position: fixed;
             bottom: 2rem;
@@ -336,7 +336,7 @@
             flex-shrink: 0;
         }
 
-        /* ─── Back to top ───────────────────────────────────────────── */
+        
         #back-to-top {
             position: fixed;
             bottom: 2rem;
@@ -368,7 +368,7 @@
             color: var(--purple);
         }
 
-        /* ─── Scroll progress bar ───────────────────────────────────── */
+        
         #scroll-progress {
             position: fixed;
             top: 0;
@@ -380,7 +380,7 @@
             transition: width 0.1s linear;
         }
 
-        /* ─── Canvas ────────────────────────────────────────────────── */
+        
         #bg-canvas {
             position: fixed;
             inset: 0;
@@ -389,7 +389,7 @@
             opacity: 1;
         }
 
-        /* ─── Animations ────────────────────────────────────────────── */
+        
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(24px); }
             to   { opacity: 1; transform: translateY(0);    }
@@ -430,7 +430,7 @@
             box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.6);
         }
 
-        /* ─── Navbar ────────────────────────────────────────────────── */
+        
         .navbar {
             position: sticky;
             top: 0;
@@ -534,7 +534,7 @@
         .mobile-menu a:last-child { border-bottom: none; }
         .mobile-menu a:hover { color: var(--text-1); }
 
-        /* ─── Hero ──────────────────────────────────────────────────── */
+        
         .hero {
             padding: 7rem 0 5rem;
             background-image: radial-gradient(var(--border) 1px, transparent 1px);
@@ -554,7 +554,7 @@
             min-width: 0;
         }
 
-        /* ─── Hero photo ─────────────────────────────────────────────── */
+        
         .hero-photo-wrap {
             flex-shrink: 0;
             align-self: center;
@@ -641,7 +641,7 @@
             cursor: pointer;
         }
 
-        /* ── Neumorphic hero buttons ── */
+        
         .btn-linkedin,
         .btn-github,
         .btn-resume {
@@ -689,7 +689,7 @@
         .chip-blue   { background: rgba(88,166,255,0.08);  color: var(--blue);   border: 1px solid rgba(88,166,255,0.15);  }
         .chip-purple { background: rgba(163,113,247,0.08); color: var(--purple); border: 1px solid rgba(163,113,247,0.15); }
 
-        /* ─── Skills ────────────────────────────────────────────────── */
+        
         #skills .container {
             max-width: min(1440px, 96vw);
         }
@@ -738,7 +738,7 @@
         .tag-purple { background: rgba(163,113,247,0.08); color: var(--purple); border: 1px solid rgba(163,113,247,0.12); }
         .tag-green  { background: rgba(63,185,80,0.08);   color: var(--green);  border: 1px solid rgba(63,185,80,0.12);   }
 
-        /* ─── Skill progress bars ────────────────────────────────────── */
+        
         .skill-bars {
             display: flex;
             flex-direction: column;
@@ -782,7 +782,7 @@
         .sb-fill.clr-purple { background: linear-gradient(90deg, var(--purple), #c49dff); }
         .sb-fill.clr-green  { background: linear-gradient(90deg, var(--green), #56d364); }
 
-        /* ─── Experience ────────────────────────────────────────────── */
+        
         .exp-card {
             background: var(--bg-dark);
             border: 1px solid var(--border);
@@ -865,8 +865,8 @@
             margin-top: 0.05rem;
         }
 
-        /* ─── Projects ──────────────────────────────────────────────── */
-        /* ── Project filters ── */
+        
+        
         .project-filters {
             display: flex;
             gap: 0.6rem;
@@ -978,7 +978,7 @@
 
         .card-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 
-        /* ─── Education ─────────────────────────────────────────────── */
+        
         .timeline {
             position: relative;
             padding-left: 2rem;
@@ -1053,7 +1053,7 @@
             line-height: 1.65;
         }
 
-        /* ─── Certifications ─────────────────────────────────────────── */
+        
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1102,7 +1102,7 @@
             color: var(--text-2);
         }
 
-        /* ─── About ──────────────────────────────────────────────────── */
+        
         .about-body {
             max-width: 780px;
             display: flex;
@@ -1136,14 +1136,14 @@
             border-radius: 4px;
         }
 
-        /* ─── Contact ───────────────────────────────────────────────── */
+        
         .contact-inner {
             text-align: center;
             max-width: 620px;
             margin: 0 auto;
         }
 
-        /* ─── Contact form ───────────────────────────────────────────── */
+        
         #contact-form {
             display: flex;
             flex-direction: column;
@@ -1322,7 +1322,7 @@
             color: var(--text-2);
         }
 
-        /* ─── Responsive ────────────────────────────────────────────── */
+        
         @media (max-width: 768px) {
             .section  { padding: 4rem 0; }
             .hero     { padding: 5rem 0 3.5rem; }
@@ -1931,7 +1931,7 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        /* ── Tech logo particles ─────────────────────────────────────── */
+        
         (function () {
             const skip =
                 window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
@@ -2021,8 +2021,10 @@
                     const prox = Math.max(0, 1 - Math.sqrt(dx*dx+dy*dy) / 160);
                     ctx.save();
                     ctx.globalAlpha = Math.min(this.a + prox * 0.4, 1);
-                    ctx.shadowBlur  = 6 + prox * 24;
-                    ctx.shadowColor = `rgba(88,166,255,${0.25 + prox * 0.75})`;
+                    if (prox > 0) {
+                        ctx.shadowBlur  = prox * 24;
+                        ctx.shadowColor = `rgba(88,166,255,${prox})`;
+                    }
                     const slot = pool[this.slot];
                     if (slot.ready) {
                         ctx.drawImage(slot.img, this.x - SIZE/2, this.y - SIZE/2, SIZE, SIZE);
@@ -2039,22 +2041,33 @@
 
             function init() {
                 particles = [];
-                const n = Math.min(Math.floor(W / 22), 65);
+                const n = Math.min(Math.floor(W / 28), 40);
                 for (let i = 0; i < n; i++) particles.push(new Particle());
             }
 
-            function loop() {
+            let lastFrame = 0, rafId = 0;
+            function loop(now) {
+                rafId = requestAnimationFrame(loop);
+                if (now - lastFrame < 33) return;
+                lastFrame = now;
                 t += 0.018;
                 ctx.clearRect(0, 0, W, H);
                 particles.forEach(p => { p.update(); p.draw(); });
-                requestAnimationFrame(loop);
             }
 
+            function startCanvas() { if (!rafId) rafId = requestAnimationFrame(loop); }
+            function stopCanvas()  { cancelAnimationFrame(rafId); rafId = 0; ctx.clearRect(0, 0, W, H); }
+
+            document.addEventListener('visibilitychange', () => document.hidden ? stopCanvas() : startCanvas());
+            window.addEventListener('scroll', () => {
+                window.scrollY > window.innerHeight ? stopCanvas() : startCanvas();
+            }, { passive: true });
+
             init();
-            loop();
+            startCanvas();
         })();
 
-        /* ── Typing effect ────────────────────────────────────────── */
+        
         (function () {
             const el    = document.getElementById('typed-role');
             if (!el) return;
@@ -2099,7 +2112,7 @@
             setTimeout(tick, 600);
         })();
 
-        /* ── Hamburger ───────────────────────────────────────────── */
+        
         const ham  = document.getElementById('hamburger');
         const mmenu = document.getElementById('mobile-menu');
 
@@ -2115,7 +2128,7 @@
             });
         });
 
-        /* ── Skill bar animation ─────────────────────────────────── */
+        
         (function () {
             const cards = document.querySelectorAll('.skill-card');
             const obs = new IntersectionObserver(entries => {
@@ -2132,7 +2145,7 @@
             cards.forEach(c => obs.observe(c));
         })();
 
-        /* ── Education timeline animation ───────────────────────── */
+        
         (function () {
             const timeline = document.querySelector('.timeline');
             const items    = document.querySelectorAll('.tl-item');
@@ -2150,7 +2163,7 @@
             obs.observe(timeline);
         })();
 
-        /* ── Custom cursor ───────────────────────────────────────── */
+        
         (function () {
             if (!window.matchMedia('(pointer: fine)').matches) return;
             const cursor = document.getElementById('cursor');
@@ -2178,7 +2191,7 @@
             });
         })();
 
-        /* ── Project filter tabs ────────────────────────────────── */
+        
         (function () {
             const btns   = document.querySelectorAll('.pf-btn');
             const groups = document.querySelectorAll('.project-group');
@@ -2199,7 +2212,7 @@
             });
         })();
 
-        /* ── Contact form (EmailJS) ──────────────────────────────── */
+        
         (function () {
             // ── Replace these three values from emailjs.com ──────────
             const EMAILJS_PUBLIC_KEY  = '5lI0s7pbojuMeVBJV';
@@ -2263,7 +2276,7 @@
             });
         })();
 
-        /* ── Copy email + toast ─────────────────────────────────── */
+        
         (function () {
             const btn   = document.getElementById('copy-email');
             const toast = document.getElementById('toast');
@@ -2277,19 +2290,20 @@
             });
         })();
 
-        /* ── Open to Work pill ──────────────────────────────────── */
+        
         (function () {
-            const pill    = document.getElementById('open-to-work');
-            const hero    = document.getElementById('summary');
-            const contact = document.getElementById('contact');
+            const pill     = document.getElementById('open-to-work');
+            const hero     = document.getElementById('summary');
+            const contact  = document.getElementById('contact');
+            const heroH    = hero.offsetHeight;
             window.addEventListener('scroll', () => {
-                const pastHero    = window.scrollY > hero.offsetHeight;
-                const atContact   = contact.getBoundingClientRect().top < window.innerHeight * 0.6;
+                const pastHero  = window.scrollY > heroH;
+                const atContact = contact.getBoundingClientRect().top < window.innerHeight * 0.6;
                 pill.classList.toggle('visible', pastHero && !atContact);
             }, { passive: true });
         })();
 
-        /* ── Back to top ────────────────────────────────────────── */
+        
         (function () {
             const btn = document.getElementById('back-to-top');
             window.addEventListener('scroll', () => {
@@ -2300,7 +2314,7 @@
             });
         })();
 
-        /* ── Scroll progress bar ────────────────────────────────── */
+        
         (function () {
             const bar = document.getElementById('scroll-progress');
             window.addEventListener('scroll', () => {
@@ -2310,14 +2324,14 @@
             }, { passive: true });
         })();
 
-        /* ── Scroll reveal ───────────────────────────────────────── */
+        
         const revealObs = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-        /* ── Active nav link ─────────────────────────────────────── */
+        
         const navAs    = document.querySelectorAll('.nav-links a');
         const sections = document.querySelectorAll('section[id]');
 
@@ -2331,7 +2345,7 @@
 
         sections.forEach(s => activeObs.observe(s));
 
-        /* ── Smooth scroll fallback ──────────────────────────────── */
+        
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', e => {
                 const t = document.querySelector(a.getAttribute('href'));

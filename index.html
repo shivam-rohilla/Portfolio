@@ -1390,6 +1390,20 @@
         .bh-btn-pa:hover { background: rgba(255,107,107,0.2); box-shadow: 0 0 14px rgba(255,107,107,0.3); transform: translateY(-1px); }
         .bh-footer-hint { font-size: 0.66rem; color: #8b949e; margin: 0; opacity: 0.55; }
         #bh-score-screen * { cursor: pointer !important; }
+        #bh-jumpscare {
+            position: fixed; inset: 0; z-index: 10002;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 80vmin; background: #000;
+            animation: bh-scare 5s cubic-bezier(0.22,1,0.36,1) forwards;
+            pointer-events: none;
+        }
+        @keyframes bh-scare {
+            0%   { opacity: 0; transform: scale(0.05); }
+            12%  { opacity: 1; transform: scale(1.08); }
+            20%  { opacity: 1; transform: scale(1);    }
+            80%  { opacity: 1; transform: scale(1);    }
+            100% { opacity: 0; transform: scale(1);    }
+        }
         /* ─────────────────────────────────────────────────── */
 
         .site-footer {
@@ -2116,7 +2130,7 @@
                     <div class="tl-date">Completed 2020</div>
                     <h3>Senior Secondary &amp; Secondary Education</h3>
                     <span class="tl-org">Kendriya Vidyalaya No.1, Hindon</span>
-                    <p>Science Stream (Non-Medical) with Computer Science.</p>
+                    <p>Humanities Stream.</p>
                 </div>
 
             </div>
@@ -2335,7 +2349,18 @@
                 W = canvas.width  = window.innerWidth;
                 H = canvas.height = window.innerHeight;
             }
-            window.addEventListener('resize', () => { resize(); init(); });
+            window.addEventListener('resize', () => {
+                resize();
+                if (gameActive) {
+                    if (!devToolsCheating && isDevToolsOpen()) {
+                        devToolsCheating = true;
+                        jumpScareTriggered = true;
+                        bhJumpScare();
+                    }
+                    return;
+                }
+                init();
+            });
             resize();
 
             class Particle {
@@ -2398,8 +2423,7 @@
 
             function init() {
                 particles = [];
-                const n = Math.min(Math.floor(W / 28), 40);
-                for (let i = 0; i < n; i++) particles.push(new Particle());
+                for (let i = 0; i < 40; i++) particles.push(new Particle());
             }
 
             let lastFrame = 0, rafId = 0;
@@ -2413,6 +2437,44 @@
             const GAME_TIME = 30;
             let bossActive = false, bossHits = 0, bossObj = null;
             let bossLastKick = 0, bossLastTeleport = 0;
+            let devToolsCheating = false, jumpScareTriggered = false;
+
+            function isDevToolsOpen() {
+                return (window.outerWidth  - window.innerWidth  > 160) ||
+                       (window.outerHeight - window.innerHeight > 160);
+            }
+
+            function bhJumpScare() {
+                // Sound — long loud sawtooth growl
+                try {
+                    if (!bhAudioCtx) bhAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    const o = bhAudioCtx.createOscillator(), g = bhAudioCtx.createGain();
+                    o.connect(g); g.connect(bhAudioCtx.destination);
+                    o.type = 'sawtooth';
+                    o.frequency.setValueAtTime(350, bhAudioCtx.currentTime);
+                    o.frequency.exponentialRampToValueAtTime(28, bhAudioCtx.currentTime + 3.5);
+                    g.gain.setValueAtTime(1.0, bhAudioCtx.currentTime);
+                    g.gain.setValueAtTime(1.0, bhAudioCtx.currentTime + 2.5);
+                    g.gain.exponentialRampToValueAtTime(0.001, bhAudioCtx.currentTime + 4.5);
+                    o.start(); o.stop(bhAudioCtx.currentTime + 4.5);
+                } catch(e) {}
+                // Voice — "nice try cheater"
+                try {
+                    const msg = new SpeechSynthesisUtterance('nice try cheater');
+                    msg.volume = 1;
+                    msg.rate   = 0.75;
+                    msg.pitch  = 0.3;
+                    speechSynthesis.speak(msg);
+                } catch(e) {}
+                // Visual — big emoji slam
+                const scare = document.createElement('div');
+                scare.id = 'bh-jumpscare';
+                scare.textContent = '👹';
+                document.body.appendChild(scare);
+                setTimeout(() => scare.remove(), 5000);
+                // Banner after scare clears
+                setTimeout(() => bhBanner('🚨 NICE TRY CHEATER 😈 — bugs respawn infinitely now', 'rgba(255,0,0,0.85)'), 650);
+            }
 
             function prepareTintedImages() {
                 tintedPool.length = 0;
@@ -2600,6 +2662,9 @@
                 pops.length = 0; floaters.length = 0; shards.length = 0; misses.length = 0;
                 comboCount = 0; comboLast = 0;
                 bossActive = false; bossHits = 0; bossObj = null;
+                devToolsCheating = isDevToolsOpen();
+                jumpScareTriggered = devToolsCheating;
+                if (devToolsCheating) bhJumpScare();
                 gameTotal = particles.length;
                 lastTimerSec = -1;
                 prepareTintedImages();
@@ -2893,6 +2958,24 @@
                     const dx = p.x-mx, dy = p.y-my;
                     if (dx*dx + dy*dy < HIT*HIT) {
                         p.alive = false; gameScore++; hit = true;
+                        // Continuous respawn when cheater detected
+                        if (devToolsCheating) {
+                            const np = new Particle();
+                            const spd2 = Math.random() * 2 + 1.5;
+                            const ang2 = Math.random() * Math.PI * 2;
+                            np.bvx = Math.cos(ang2) * spd2; np.bvy = Math.sin(ang2) * spd2; np.alive = true;
+                            particles.push(np);
+                            const oc = document.createElement('canvas');
+                            oc.width = SIZE; oc.height = SIZE;
+                            const oc2d = oc.getContext('2d');
+                            const slotSrc = pool[np.slot];
+                            if (slotSrc && slotSrc.ready) {
+                                oc2d.filter = 'sepia(0.7) saturate(3) hue-rotate(295deg) brightness(1.1)';
+                                oc2d.drawImage(slotSrc.img, 0, 0, SIZE, SIZE);
+                                oc2d.filter = 'none';
+                            }
+                            tintedPool.push({ canvas: oc, ready: slotSrc ? slotSrc.ready : false });
+                        }
                         const now2 = Date.now();
                         comboCount = (now2 - comboLast < 1400) ? comboCount+1 : 1;
                         comboLast = now2;
@@ -2910,7 +2993,7 @@
                             bhSound('squash');
                         }
                         bhUpdateHUD();
-                        if (gameScore === gameTotal) setTimeout(() => spawnBoss(), 500);
+                        if (!devToolsCheating && gameScore === gameTotal) setTimeout(() => spawnBoss(), 500);
                         break;
                     }
                 }
